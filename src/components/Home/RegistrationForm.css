@@ -1,0 +1,141 @@
+/* Base Styles */
+.registration-form {
+    padding: 2rem 0;
+    background-color: #f8f9fa;
+  }
+  
+  .form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .form-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .form-wrapper {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* Form Rows and Groups */
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Input Fields */
+  input, select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+  }
+  
+  input:focus, select:focus {
+    border-color: #2d5a6b;
+    outline: none;
+  }
+  
+  .error {
+    border-color: #dc3545;
+  }
+  
+  .error-message {
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    display: block;
+  }
+  
+  /* Checkbox */
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .checkbox-group input {
+    width: auto;
+  }
+  
+  /* Submit Button */
+  .submit-button {
+    background-color: #2d5a6b;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #1e3d47;
+  }
+  
+  /* Success Message */
+  .form-success-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  .form-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #c3e6cb;
+  }
+  
+  /* Desktop Styles */
+  @media (min-width: 768px) {
+    .registration-form {
+      padding: 4rem 0;
+    }
+  
+    .form-wrapper {
+      padding: 2.5rem;
+    }
+  
+    .form-row {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+  
+    .submit-button {
+      width: auto;
+      padding: 1rem 3rem;
+      display: block;
+      margin: 0 auto;
+    }
+  }
