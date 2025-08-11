@@ -1,0 +1,108 @@
+.header {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d5a6b;
+    background-color: #f0f0f0;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  
+  /* Desktop Navigation */
+  .desktop-nav {
+    display: flex;
+    gap: 2rem;
+    margin-right: 2rem; /* Added right margin */
+  }
+  
+  .desktop-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 0.5rem 0; /* Added padding for better click area */
+  }
+  
+  .desktop-nav .nav-link:hover {
+    color: #2d5a6b;
+  }
+  
+  /* Mobile Navigation */
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+    border-radius: 0 0 12px 12px;
+  }
+  
+  .mobile-nav.open {
+    display: flex;
+  }
+  
+  .mobile-nav .nav-link {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e9ecef;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  /* Menu Toggle */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: 2px solid #2d5a6b;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    color: #2d5a6b;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .menu-toggle:hover {
+    background-color: #2d5a6b;
+    color: white;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .desktop-nav {
+      display: none;
+    }
+    
+    .menu-toggle {
+      display: block;
+    }
+    
+    .header-container {
+      padding: 0 1.5rem; /* Reduced padding on mobile */
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .mobile-nav {
+      display: none;
+    }
+  }

@@ -1,0 +1,132 @@
+.about-hero-section {
+    padding: 6rem 0 4rem;
+    background-color: #f8f9fa;
+    position: relative;
+  }
+  
+  .about-hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .about-hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  .about-hero-content h1 span {
+    color: var(--primary-color);
+  }
+  
+  .about-hero-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .about-hero-image {
+    background-color: #e9ecef;
+    border-radius: 12px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    color: var(--primary-color);
+    position: relative;
+  }
+  
+  .experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    background: linear-gradient(135deg, #2d5a6b 0%, #1e3d47 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    border: 3px solid rgba(255,255,255,0.2);
+    transform: rotate(-5deg);
+    transition: all 0.3s ease;
+    z-index: 1;
+    /* Medal design using pure CSS */
+    overflow: hidden;
+  }
+  
+  .experience-badge::before {
+    content: "★";
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 1.2rem;
+    color: gold;
+    text-shadow: 0 0 5px rgba(0,0,0,0.3);
+  }
+  
+  .experience-badge:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  }
+  
+  .experience-badge div {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  .experience-badge span {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    display: block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  /* Ribbon effect using CSS */
+  .experience-badge::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, 
+      transparent 10%, 
+      rgba(255,255,255,0.5) 50%, 
+      transparent 90%);
+  }
+  
+  @media (max-width: 768px) {
+    .about-hero-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 2rem;
+    }
+    
+    .about-hero-image {
+      height: 300px;
+    }
+    
+    .experience-badge {
+      right: 50%;
+      transform: translateX(50%) rotate(-5deg);
+      bottom: -30px;
+    }
+    
+    .experience-badge:hover {
+      transform: translateX(50%) rotate(0deg) scale(1.05);
+    }
+  }

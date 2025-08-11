@@ -1,0 +1,11 @@
+.all-services {
+    padding: 4rem 0;
+    background-color: white;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }

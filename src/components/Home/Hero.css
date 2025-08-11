@@ -1,0 +1,102 @@
+.hero-section {
+  position: relative;
+  /* padding: 8rem 0; */
+  min-height: 86vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../../../public/image_1.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0;
+  padding: 0 0 0 5%; /* Changed to left padding only */
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-left: 0; /* Ensure no margin pushes it right */
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-content h1 span {
+  color: #2d5a6b;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.visa-types {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  font-size: 1.2rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.divider {
+  color: #aaa;
+}
+
+.cta-button {
+  background-color: #2d5a6b;
+  color: white;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #1e3d47;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  
+  .hero-section {
+    padding: 6rem 0;
+    min-height: 80vh;
+    background-image: unset;
+  }
+
+  .hero-container {
+    padding: 0 5%; /* Maintain left alignment on mobile */
+  }
+
+  .hero-content {
+    padding: 2rem;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .visa-types {
+    font-size: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Keep left-aligned on mobile */
+  }
+}

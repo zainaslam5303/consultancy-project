@@ -1,0 +1,61 @@
+.process-section {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+  }
+  
+  .process-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .step-card {
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+    position: relative;
+    padding: 0 1rem;
+  }
+  
+  .step-number {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+  }
+  
+  .step-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .step-description {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .process-steps {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .step-card {
+      width: 100%;
+      max-width: 250px;
+    }
+  }
