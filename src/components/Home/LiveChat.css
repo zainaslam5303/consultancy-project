@@ -1,0 +1,108 @@
+.live-chat-widget {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .chat-header {
+    background-color: #2d5a6b;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .chat-header:hover {
+    background-color: #1e3d47;
+    transform: translateY(-3px);
+  }
+  
+  .chat-icon {
+    font-size: 1.5rem;
+  }
+  
+  .chat-content {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 300px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transform-origin: bottom right;
+    animation: scaleIn 0.3s ease;
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .chat-messages {
+    padding: 1.5rem;
+    height: 250px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+  }
+  
+  .agent-message {
+    background-color: white;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: left;
+  }
+  
+  .chat-input {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid #e9ecef;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+  }
+  
+  .chat-input button {
+    background-color: #2d5a6b;
+    color: white;
+    border: none;
+    padding: 0 1.5rem;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .chat-input button:hover {
+    background-color: #1e3d47;
+  }
+  
+  @media (max-width: 480px) {
+    .live-chat-widget {
+      bottom: 20px;
+      right: 20px;
+    }
+    
+    .chat-content {
+      width: 280px;
+    }
+  }

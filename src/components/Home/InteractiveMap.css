@@ -1,0 +1,48 @@
+.interactive-map {
+    padding: 4rem 0;
+    background-color: white;
+    text-align: center;
+  }
+  
+  .map-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  .map-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255,255,255,0.9);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: left;
+    max-width: 250px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .map-overlay h3 {
+    color: #2d5a6b;
+    margin-bottom: 0.5rem;
+  }
+  
+  .map-overlay p {
+    color: #333;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .map-overlay {
+      position: relative;
+      max-width: 100%;
+      bottom: auto;
+      left: auto;
+      margin-top: -5px;
+      border-radius: 0 0 8px 8px;
+    }
+  }
