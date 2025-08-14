@@ -9,6 +9,7 @@ import VisaStats from '../components/Home/VisaStats';
 import InteractiveMap from '../components/Home/InteractiveMap';
 import LiveChat from '../components/Home/LiveChat';
 import './HomePage.css';
+import WhatsAppButton from '../components/Home/WhatsAppButton';
 const HomePage = () => {
   const [audio] = useState(typeof Audio !== "undefined" ? new Audio('airplane.mp3') : null);
 
@@ -43,10 +44,7 @@ const HomePage = () => {
       <div className="interactive-visa-track">
         <div className="visa-stamp-track">
           {/* Moving plane */}
-          <div 
-          className="flying-plane" 
-          onClick={playSound}
-          onTouchStart={playSound} >
+          <div className="flying-plane">
             <img 
               src="airplane-1.png" 
               alt="Airplane" 
@@ -54,8 +52,8 @@ const HomePage = () => {
             />
           </div>
           
-          {/* Interactive visa stamps */}
-          {['🇺🇸', '🇬🇧', '🇨🇦', '🇦🇺', '🇪🇺', '🇯🇵', '🇸🇬', '🇳🇿'].map((flag, index) => (
+          {/* Interactive visa stamps - reduced number for mobile */}
+          {['🇺🇸', '🇬🇧', '🇨🇦', '🇦🇺', '🇪🇺'].map((flag, index) => (
             <div 
               key={index}
               className="visa-stamp"
@@ -66,6 +64,10 @@ const HomePage = () => {
               onMouseLeave={(e) => {
                 e.currentTarget.classList.remove('stamped');
                 e.currentTarget.textContent = flag;
+              }}
+              onTouchStart={(e) => {
+                e.currentTarget.classList.toggle('stamped');
+                e.currentTarget.textContent = e.currentTarget.classList.contains('stamped') ? '✅' : flag;
               }}
             >
               {flag}
@@ -96,7 +98,8 @@ const HomePage = () => {
       
       <RegistrationForm />
       
-      <LiveChat />
+      {/* <LiveChat /> */}
+      <WhatsAppButton />
     </div>
   );
 };
